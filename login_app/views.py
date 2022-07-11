@@ -37,6 +37,8 @@ def UserLogin(request):
     else:
         return Response(seri_obj.errors)
 
+# the user will enter the verification token which he got on his E-mail
+# this function will verify the user
 def Verify_token(request):
     form_token=request.POST.get('Token')
     model_obj=models.SignUp()
