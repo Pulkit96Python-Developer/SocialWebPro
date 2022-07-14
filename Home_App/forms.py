@@ -1,12 +1,14 @@
-from dataclasses import fields
 from django import forms
-from signup_app import models
+from Home_App import models
 
 
 class SignUpForm(forms.ModelForm):
     class Meta:
         model=models.SignUp
-        fields='__all__'
+        fields=['Email','Password']
         widgets = {
-        'password': forms.PasswordInput(),
+        'Password': forms.PasswordInput(),
     }
+
+class VerifyEmail(forms.Form):
+    Email=forms.EmailField()

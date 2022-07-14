@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get YouTubeData</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h3>Get Channel Activities</h3>
+        </div>
+        <form action="{% url 'ChannelActivities' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="ChannelURL">YouTube Channel url:</label>
+                <input type="text" name="ChannelURL" id="">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            
+        </form>
+    </div>
+    <div>
+        <div>
+            <h3>Get Captions</h3> 
+        </div>
+        <form action="{% url 'GetCaptions' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="Caption">Enter Video URL:</label>
+                <input type="text" name="Caption" id="">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            
+        </form>
+    </div>
+    <div>
+        <form action="{% url 'ChannelDetails' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="ChannelURL">Channel url:</label>
+                <input type="text" name="ChannelURL" id="">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div>
+    <div>
+        <h3>Get Comments On Video</h3>
+    </div>
+        <form action="{% url 'GetVideoComments' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="VideoComments">Enter Video URL:</label>
+                <input type="text" name="VideoComments" id="">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            
+        </form>
+    </div>
+    <div>
+        <div>
+            <h3>
+                Get Channel Members
+            </h3>
+        </div>
+        <form action="{% url 'GetChannelMembers' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="ChannelURL">Channel url:</label>
+                <input type="text" name="ChannelURL" id="">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div>
+        <h3>Video Search Results</h3>
+        <form action="{% url 'VideoSearchResults' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="Keyword">Enter Keyword:</label>
+                <input type="text" name="Keyword" id="">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            
+        </form>
+    </div>
+    <div>
+        <h3>Get Video Information</h3>
+        <form action="{% url 'Video Information' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="VideoInfo">Video URL:</label>
+                <input type="text" name="VideoInfo" id="">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div>
+        <h3>Search Video Content In Different Languages & Regions</h3>
+        <form action="{% url 'Video Languages' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="VideoLanguages">Video URL:</label>
+                <input type="text" name="VideoLanguages" id="">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <body>
+        <div>
+            <div>
+                <h3>Get Channel Subscriptions</h3>
+            </div>
+            <form action="{% url 'Channel Subscriptions' %}" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="ChannelSubscriptions">YouTube Channel url:</label>
+                    <input type="text" name="ChannelSubscriptions" id="">
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+                
+            </form>
+        </div>
+    
+</body>
+</html>
